@@ -1,10 +1,29 @@
-/*#include <stdio.h>
-#include <string.h>
-int main(void)
-{
-    char s[100] = "Goats";
-    char t[100];
 
-    printf("memcpy  : %s\n", memcpy(t, s, 6));
-    printf("memmove : %s", memmove(s, s + 2, 6));
-}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# define RED        "\033[31m"
+# define GREEN        "\033[32m"
+# define DEFAULT    "\033[0m"
+# define BLUE        "\033[0;34m"
