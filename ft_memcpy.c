@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:49:49 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/11 20:08:18 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/13 00:24:54 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	psrc = (unsigned char *)src;
 	pdest = (unsigned char *)dest;
-	if (src == NULL && dest == NULL)
+	if (!src && !dest)
 		return (NULL);
 	if (dest == src)
 		return (dest);
