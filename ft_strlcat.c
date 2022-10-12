@@ -6,33 +6,44 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:06:32 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/11 15:08:39 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/12 02:28:17 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlcat(char *dst, const char *src, size_t size)
+size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    size_t  i;
-    size_t  j;
-    size_t  len;
+    size_t          i;
+	unsigned int	slen;
+	unsigned int	dlen;
 
-    i = 0 ;
-    j = ft_strlen(dst);
-    len = ft_strlen(src) + ft_strlen(dst);
-    if (!dst)
-        return (len);
-    while (src[i] && i < (size - j - 1))
-        dst[j++] = src[i++];
-    dst[j] = '\0';
-    return (len);
+	
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	dlen = ft_strlen(dst);
+	slen = ft_strlen(src);
+	if (dstsize <= dlen)
+		return (dstsize + slen);
+	i = 0;
+	while (src[i] && i < dstsize - dlen - 1)
+	{
+		dst[dlen + i] = src[i];
+		i++;
+	}
+	dst[i + dlen] = '\0';
+	return (dlen + slen);
 }
 
-int main()
-{
-    char    dst[10] = "MAD";
-    char    src[] = "hoes";
-    printf("%zu\n", ft_strlcat(dst, src, 11));
-    printf("%s", dst);
-}
+
+// int main()
+// {
+//     char    dst[10] = "";
+//     char    src[10] = "NULL";
+//     char    dst2[10] = "";
+//     char    src2[10] = "NULL";
+//     printf("dyalna  : %zu  |  ", ft_strlcat(NULL, src, 3));
+//     printf("%s\n", dst);
+//     printf("dyalhom : %zu  |  ", strlcat(NULL, src2, 3));
+//     printf("%s\n", dst2);
+// }
