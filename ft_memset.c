@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 05:28:45 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/12 20:40:47 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/14 01:31:49 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memset(void *b, int c, size_t len)
 }
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 int main()
 {
@@ -42,3 +42,4 @@ int main()
     }
 	return 0;
 }
+*/
