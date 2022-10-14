@@ -6,12 +6,11 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:49:49 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/13 00:24:54 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/14 05:16:00 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 00:12:02 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/12 23:25:57 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/14 05:24:26 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	
+
 	i = 0;
 	if (n <= 0)
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 23:44:03 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/09 21:12:08 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/14 05:29:28 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,6 @@ char	*ft_strrchr(const char *str, int c)
 		i--;
 	}
 	return (NULL);
-	//if (str[i] == (char)c)
-	//	return ((char *)&str[i]);
-	//return (0);
 }
 /*#include <string.h>
 #include <stdio.h>

@@ -6,18 +6,18 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 22:34:33 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/11 20:08:43 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/14 05:24:11 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
 	i = 0;
 	while (str[i])
 		i++;
-    return (i);
+	return (i);
 }

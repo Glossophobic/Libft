@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:04:13 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/10 00:11:24 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/14 05:04:17 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
-#include <stdio.h>
-/*int main()
+/*#include <stdio.h>
+int main()
 {
 	char str[] = "thisis not zero";
 	ft_bzero(str, 16);

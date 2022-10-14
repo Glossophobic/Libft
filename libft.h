@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 23:31:08 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/14 01:14:01 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/14 03:51:14 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-#include <stdio.h> 
-#include <string.h>
+# include <stdio.h> 
+# include <string.h>
+# include <limits.h>
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -40,5 +41,6 @@ char	*ft_strdup(const char *s1);
 void	ft_bzero(void *s, size_t n);
 size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t  ft_strlcat(char *dst, const char *src, size_t dstsize);
+void    *ft_calloc(size_t count, size_t size);
 
 #endif

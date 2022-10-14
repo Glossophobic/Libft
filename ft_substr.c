@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 06:21:25 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/14 05:20:01 by oubelhaj         ###   ########.fr       */
+/*   Created: 2022/10/14 03:55:13 by oubelhaj          #+#    #+#             */
+/*   Updated: 2022/10/14 05:03:11 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
-	char	*dup;
-
-	i = 0;
-	dup = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (!dup)
-		return (NULL);
-	while (s1[i])
-	{
-		dup[i] = s1[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
+    
 }
-/*#include <stdio.h>
-int main()
-{
-	char str[] = "bnt louarrak";
-	printf("%s", ft_strdup(str));
-}*/
+
+// s: The string from which to create the substring.
+// start: The start index of the substring in the
+// string ’s’.
+// len: The maximum length of the substring.
+
+// Allocates (with malloc(3)) and returns a substring
+// from the string ’s’.
+// The substring begins at index ’start’ and is of
+// maximum size ’len’.
