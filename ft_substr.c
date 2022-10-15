@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 03:55:13 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/14 05:03:11 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/15 01:50:07 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,24 @@
 
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
+    size_t     i;
+    size_t	rem;
+    char    *substr;
     
+    i = 0;
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		rem = 0;
+	else if (ft_strlen(s) - start < len)
+    	rem = ft_strlen(s) - start;
+	else 
+		rem = len;
+    substr = malloc(rem + 1);
+    if (!substr)
+        return (0);
+	while (i < rem)
+    	substr[i++] = s[start++];
+    substr[i] = '\0';
+    return (substr);
 }
-
-// s: The string from which to create the substring.
-// start: The start index of the substring in the
-// string ’s’.
-// len: The maximum length of the substring.
-
-// Allocates (with malloc(3)) and returns a substring
-// from the string ’s’.
-// The substring begins at index ’start’ and is of
-// maximum size ’len’.

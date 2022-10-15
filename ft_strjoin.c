@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 02:33:05 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/15 02:35:14 by oubelhaj         ###   ########.fr       */
+/*   Created: 2022/10/15 01:47:49 by oubelhaj          #+#    #+#             */
+/*   Updated: 2022/10/15 02:08:45 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
+	char	*str;
+	int		s1len;
+	int		s2len;
 
-	i = 0;
-	j = 0;
-	if (!haystack || !needle)
-		return ((char *)haystack);
-	if (len == 0)
+	if (!s1 || !s2)
 		return (0);
-	while (haystack[i] && i < len)
-	{
-		if (haystack[i] == needle[j])
-		{
-			j = 0;
-			while ((haystack[i + j] == needle[j]))
-			{
-				if (needle[j + 1] == '\0')
-					return ((char *)&haystack[i]);
-				j++;
-			}
-		}
-		i++;
-	}
-	return (NULL);
+	s1len = ft_strlen(s1);
+	s2len = ft_strlen(s2);
+	str = malloc(s1len + s2len + 1);
+	if (!str)
+		return (0);
+	ft_memmove(str, s1, s1len);
+	ft_memmove(str + s1len, s2, s2len + 1);
+	return (str);
 }

@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 09:22:30 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/14 23:28:57 by oubelhaj         ###   ########.fr       */
+/*   Created: 2022/10/15 02:09:27 by oubelhaj          #+#    #+#             */
+/*   Updated: 2022/10/15 02:10:20 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned char	*p;
+    
+}
 
-	p = (unsigned char *)str;
-	while (n > 0)
-	{
-		if (*p == (unsigned char)c)
-			return (p);
-		p++;
-		n--;
-	}
-	return (NULL);
-}
-/*#include <stdio.h>
-#include <string.h>
-int main()
-{
-    const int  tab[] = {1, 5, 8, 6};
-    printf("%p\n", ft_memchr(s,'z', ));
-    printf("%p", memchr(s, 'z', 100));
-}
-*/
+
+// s1: The string to be trimmed.
+// set: The reference set of characters to trim.
+
+// Allocates (with malloc(3)) and returns a copy of
+// ’s1’ with the characters specified in ’set’ removed
+// from the beginning and the end of the string.

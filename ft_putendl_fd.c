@@ -1,37 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 09:22:30 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/14 23:28:57 by oubelhaj         ###   ########.fr       */
+/*   Created: 2022/10/14 20:58:56 by oubelhaj          #+#    #+#             */
+/*   Updated: 2022/10/14 21:21:55 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned char	*p;
-
-	p = (unsigned char *)str;
-	while (n > 0)
-	{
-		if (*p == (unsigned char)c)
-			return (p);
-		p++;
-		n--;
-	}
-	return (NULL);
+	while (*s)
+		write(fd, s++, 1);
+	write(fd, "\0", 1);
 }
-/*#include <stdio.h>
-#include <string.h>
-int main()
-{
-    const int  tab[] = {1, 5, 8, 6};
-    printf("%p\n", ft_memchr(s,'z', ));
-    printf("%p", memchr(s, 'z', 100));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:45:14 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/14 05:44:02 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/14 20:51:31 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int	i;
 
-	// if (!dst && !src) //CHECK THIS SHIT
-	// 	return (0);
-	// if (dst == src) //ALSO CHECK THIS SHIT IF NECESSARY
-	// 	return (dst); //
+	//if (!dst && !src) //CHECK IF THIS SHIT IS NECESSARY
+		//return (0);
 	i = 0;
 	if (dst > src)
 	{
