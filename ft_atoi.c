@@ -35,3 +35,14 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
+/*while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = nb * 10 + (str[i] - '0');
+		if (nb < 0 && n == -1 && nb != -2147483648)
+			return (0);
+		if (nb < 0 && n == 1)
+			return (-1);
+		i++;
+	}
+	return (nb * n);
+}*/
