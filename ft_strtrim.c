@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 00:40:10 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/17 00:55:24 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/17 03:55:41 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 	
 	i = 0;
+	if (!s1 || !set)
+		return (0);
 	j = ft_strlen(s1) - 1;
 	while (s1[i] && check(set, s1[i]))
 		i++;
@@ -43,10 +45,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_substr(s1, i, len + 1);
 	return (str);
 }
-// #include <stdio.h>
-// int main()
-// {
-// 	char const s1[] = "/*/*.Ouss/ama/.*/.";
-// 	char const set[] = "/*.";
-// 	printf("%s", ft_strtrim(s1, set));
-// }
+#include <stdio.h>
+int main()
+{
+	// char const s1[] = "/*/*.Ouss/ama/.*/.";
+	char const set[] = "/*.";
+	printf("%s", ft_strtrim(NULL, set));
+}
