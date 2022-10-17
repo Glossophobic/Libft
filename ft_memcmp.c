@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 21:57:24 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/14 05:15:26 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/16 23:53:53 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	if (n == 0)
 		return (0);
 	i = 0;
-	while (i < n)
+	while (i < n - 1)
 	{
 		if (p1[i] != p2[i])
 			return (p1[i] - p2[i]);
