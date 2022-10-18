@@ -6,19 +6,19 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 20:53:52 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/16 21:41:12 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/17 12:48:48 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	if (fd < 0 || !s)
 		return ;
-    while (*s)
-    {
-        ft_putchar_fd(*s, fd);
+	while (*s)
+	{
+		ft_putchar_fd(*s, fd);
 		s++;
 	}
 }

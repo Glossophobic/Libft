@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:45:14 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/14 20:51:31 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/18 18:01:42 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int	i;
 
-	//if (!dst && !src) //CHECK IF THIS SHIT IS NECESSARY
-		//return (0);
 	i = 0;
 	if (dst > src)
 	{
@@ -33,4 +31,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(dst, src, len);
 	}
 	return (dst);
+}
+#include <stdio.h>
+int main()
+{
+	char str[] = "bacdedfffffffff";
+	// memmove(str + 2, str, 3);
+	printf("%p\n", str);
+	printf("%p", str + 2);
+	// printf("%s", str);
 }
