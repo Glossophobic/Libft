@@ -6,26 +6,24 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:51:27 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/18 19:46:32 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/19 23:45:59 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count1(char const *str, char sep)
+int	countwrd(char const *str, char sep)
 {
-	int	i;
-	int	count;
+	unsigned int	i;
+	int				count;
 
-	i = 0;
 	count = 0;
+	i = 0;
 	while (str[i] == sep)
 		i++;
-	while (str[i])
-	{
-		if (str[i - 1] == sep)
-			i++;
-		else if (str[i] == sep)
+	while (str[i] != '\0')
+    {
+        if (str[i] == sep)
 			count++;
 		else if (str[i] != sep && str[i + 1] == '\0')
 			count++;
@@ -34,33 +32,60 @@ int	count1(char const *str, char sep)
 	return (count);
 }
 
-int	count2()
+char	*ft_strndup(const char *s, int n)
 {
+	char	*str;
+	int		i;
 
-}
-
-char	**creampie()
-{
-
+	str = malloc(sizeof(char) * n + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (s[i] && i < n)
+	{
+		str[i] = s[i];
+		i++;
+	}
+	str[n] = '\0';
+	return (str);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
-	char	**str;
-	
-	str = malloc(sizeof(char *) * countw(s, c) + 1);
-	if (!str)
+	int		k;
+	char	**tab;
+
+	i = 0;
+	k = 0;
+	if (!s)
 		return (0);
-	
+	tab = malloc(sizeof(char *) * (countwrd(s, c) + 1));
+	if (!tab)
+		return (0);
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		j = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (i > j)
+			tab[k++] = ft_strndup(s + j, i - j);
+	}
+	tab[k] = 0;
+	return (tab);
 }
 
-
-// The array of new strings resulting from the split.
-// NULL if the allocation fails.
-
-// Allocates (with malloc(3)) and returns an array
-// of strings obtained by splitting ’s’ using the
-// character ’c’ as a delimiter. The array must end
-// with a NULL pointer.
+// int main()
+// {
+// 	char **str;
+// 	int i = 0; 
+// 	str = ft_split(NULL, NULL);
+// 	while (str[i])
+// 	{
+// 		printf("%s\n", str[i]);
+// 		i++;
+// 	}
+// }
