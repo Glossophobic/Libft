@@ -6,13 +6,13 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 00:40:10 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/18 16:24:26 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:07:40 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(const char *set, char c)
+static int	check(const char *set, char c)
 {
 	int	i;
 

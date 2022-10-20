@@ -6,40 +6,41 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:51:27 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/19 23:45:59 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:07:31 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	countwrd(char const *str, char sep)
+static int	countwrd(char const *str, char sep)
 {
 	unsigned int	i;
 	int				count;
 
-	count = 0;
 	i = 0;
-	while (str[i] == sep)
-		i++;
-	while (str[i] != '\0')
-    {
-        if (str[i] == sep)
+	count = 0;
+	while (str[i])
+	{
+		if (str[i] == sep)
+			i++;
+		else
+		{
 			count++;
-		else if (str[i] != sep && str[i + 1] == '\0')
-			count++;
-		i++;
+			while (str[i] && str[i] != sep)
+				i++;
+		}
 	}
 	return (count);
 }
 
-char	*ft_strndup(const char *s, int n)
+static char	*ft_strndup(const char *s, int n)
 {
 	char	*str;
 	int		i;
 
 	str = malloc(sizeof(char) * n + 1);
 	if (!str)
-		return (NULL);
+		return (0);
 	i = 0;
 	while (s[i] && i < n)
 	{
@@ -59,8 +60,6 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	k = 0;
-	if (!s)
-		return (0);
 	tab = malloc(sizeof(char *) * (countwrd(s, c) + 1));
 	if (!tab)
 		return (0);
@@ -77,15 +76,3 @@ char	**ft_split(char const *s, char c)
 	tab[k] = 0;
 	return (tab);
 }
-
-// int main()
-// {
-// 	char **str;
-// 	int i = 0; 
-// 	str = ft_split(NULL, NULL);
-// 	while (str[i])
-// 	{
-// 		printf("%s\n", str[i]);
-// 		i++;
-// 	}
-// }
