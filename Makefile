@@ -6,7 +6,7 @@
 #    By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 22:21:38 by oubelhaj          #+#    #+#              #
-#    Updated: 2022/10/20 22:50:39 by oubelhaj         ###   ########.fr        #
+#    Updated: 2022/10/21 02:21:46 by oubelhaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,14 +19,14 @@ SRCS =  ft_isalnum.c ft_isprint.c ft_memmove.c ft_putnbr_fd.c ft_strlcat.c \
 
 OBJS = ${SRCS:.c=.o}
 
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+.o:.c
+	${CC} ${CFLAGS} -c
 
 all: ${NAME}
 
