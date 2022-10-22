@@ -6,9 +6,11 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 06:06:36 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/16 22:02:51 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/22 03:44:10 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -38,9 +40,9 @@ int	ft_atoi(const char *str)
 /*while (str[i] >= '0' && str[i] <= '9')
 	{
 		nb = nb * 10 + (str[i] - '0');
-		if (nb < 0 && n == -1 && nb != -2147483648)
+		if (nb < 0 && sign == -1 && nb != -2147483648)
 			return (0);
-		if (nb < 0 && n == 1)
+		if (nb < 0 && sign == 1)
 			return (-1);
 		i++;
 	}

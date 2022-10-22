@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:51:27 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/20 18:56:12 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/22 03:12:10 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,3 +76,15 @@ char	**ft_split(char const *s, char c)
 	tab[k] = 0;
 	return (tab);
 }
+
+// int main()
+// {
+//   char **str;
+//   str = ft_split("@@zok@@@lghachi@@@mehdi", '@');
+//   int i = 0;
+//   while (str[i])
+//   {
+//     printf("%s\n", str[i]);
+//     i++;
+//   }
+// }

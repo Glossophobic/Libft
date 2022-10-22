@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 21:15:35 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/20 21:30:09 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/22 04:06:33 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,27 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
-	
+	int		i;
+	char	*new_string;
+
 	i = 0;
+	new_string = malloc(sizeof(char) * ft_strlen(s) + 1);
+	if (!new_string)
+		return (0);
 	while (s[i])
 	{
-		
+		new_string[i] = f(i, s[i]);
+		i++;
 	}
+	new_string[i] = '\0';
+	return (new_string);
 }
 
-// s: The string on which to iterate.
-// f: The function to apply to each character.
+// int main()
+// {
+// 	char str[] = "0000000000";
+// 	printf("%s\n", ft_strmapi(str, &iter));
+// }
 
-// Return : The string created from the successive applications of ’f’.
-// Returns NULL if the allocation fails.
-
-// Applies the function ’f’ to each character of the
-// string ’s’, and passing its index as first argument
-// to create a new string (with malloc(3)) resulting
-// from successive applications of ’f’.
+//char (*)(unsigned int, char *)
+//char (*)(unsigned int, char)

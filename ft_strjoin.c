@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 01:47:49 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/20 22:34:24 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/22 03:56:53 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	int		s1len;
-	int		s2len;
+	int		s1_len;
+	int		s2_len;
 
 	if (!s1 || !s2)
 		return (0);
-	s1len = ft_strlen(s1);
-	s2len = ft_strlen(s2);
-	str = malloc(sizeof(char) * (s1len + s2len + 1));
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	str = malloc(sizeof(char) * (s1_len + s2_len + 1));
 	if (!str)
 		return (0);
-	ft_memmove(str, s1, s1len);
-	ft_memmove(str + s1len, s2, s2len + 1);
+	ft_memmove(str, s1, s1_len);
+	ft_memmove(str + s1_len, s2, s2_len + 1);
 	return (str);
 }

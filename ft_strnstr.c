@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 02:33:05 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/17 12:49:45 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/22 03:59:21 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		i++;
 		len--;
 	}
-	return (NULL);
+	return (0);
 }
 
 // #include <string.h>

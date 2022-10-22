@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 06:21:25 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/14 05:20:01 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/22 03:55:04 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char	*ft_strdup(const char *s1)
 	dup[i] = '\0';
 	return (dup);
 }
+
 /*#include <stdio.h>
 int main()
 {
