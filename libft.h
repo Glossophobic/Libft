@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 23:31:08 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/22 03:38:38 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/22 21:02:09 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 # include <stdio.h> 
 # include <string.h>
 # include <limits.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 char	*ft_itoa(int n);
 int		ft_isalnum(int c);
