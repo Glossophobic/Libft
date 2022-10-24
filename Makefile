@@ -6,7 +6,7 @@
 #    By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 22:21:38 by oubelhaj          #+#    #+#              #
-#    Updated: 2022/10/22 03:04:21 by oubelhaj         ###   ########.fr        #
+#    Updated: 2022/10/24 03:06:05 by oubelhaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,11 @@ SRCS =  ft_isalnum.c ft_isprint.c ft_memmove.c ft_putnbr_fd.c ft_strlcat.c \
 		ft_memcpy.c ft_putendl_fd.c ft_strdup.c ft_strncmp.c ft_tolower.c ft_strjoin.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_striteri.c ft_strmapi.c
 
+BSRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
+
 OBJS = ${SRCS:.c=.o}
+
+BOBJS = ${BSRCS:.c=.o}
 
 CC = cc
 
@@ -25,13 +29,16 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
-.o:.c
-	${CC} ${CFLAGS} -c
+%.o:%.c
+	${CC} ${CFLAGS} -c $< -o $@
 
 all: ${NAME}
 
 ${NAME}: ${OBJS}
 	ar rcs ${NAME} ${OBJS}
+
+bonus: ${NAME} ${BOBJS}
+	ar rcs ${NAME} ${BOBJS}
 
 clean:
 	rm -rf ${OBJS}
@@ -41,4 +48,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus

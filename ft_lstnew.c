@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 00:12:02 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/23 22:55:15 by oubelhaj         ###   ########.fr       */
+/*   Created: 2022/10/23 01:07:19 by oubelhaj          #+#    #+#             */
+/*   Updated: 2022/10/24 03:04:02 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
+	t_list	*head;
 
-	i = 0;
-	if (n <= 0)
+	head = malloc(sizeof(t_list));
+	if (!head)
 		return (0);
-	while ((s1[i] == s2[i]) && (s1[i] || s2[i]) && i < n - 1)
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	head->content = content;  // same as (*head).content = content
+	head->next = NULL;
+	return (head);
 }
+
+// int main()
+// {
+// 	t_list	*node;
+// 	node = ft_lstnew("string");
+// 	printf("%p\n", node->content);
+// 	printf("%p\n", node->next);
+// }
