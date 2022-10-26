@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:51:27 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/26 17:01:41 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/26 18:51:42 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	k = 0;
-	if (!s || !c)
+	if (!s)
 		return (0);
 	tab = malloc(sizeof(char *) * (countwrd(s, c) + 1));
 	if (!tab)
@@ -82,7 +82,7 @@ char	**ft_split(char const *s, char c)
 // int main()
 // {
 //   char **str;
-//   str = ft_split("                       7                          ", ' ');
+//   str = ft_split("\0aa\0bbb", '\0');
 //   int i = 0;
 
 //   while (str[i])

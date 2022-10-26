@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 20:53:52 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/22 03:54:30 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/26 23:24:36 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (fd < 0 || !s)
+	if (!s)
 		return ;
 	while (*s)
 	{
