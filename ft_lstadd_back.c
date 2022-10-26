@@ -1,33 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/23 01:07:19 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/25 00:36:51 by oubelhaj         ###   ########.fr       */
+/*   Created: 2022/10/25 00:55:44 by oubelhaj          #+#    #+#             */
+/*   Updated: 2022/10/26 01:24:02 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*head;
+	t_list	*node;
 
-	head = malloc(sizeof(t_list));
-	if (!head)
-		return (0);
-	head->content = content;  // same as (*head).content = content
-	head->next = NULL;
-	return (head);
+	if (*lst != NULL)
+	{
+		node = ft_lstlast(*lst);
+		node->next = new;
+	}
+	else
+		*lst = new;
 }
 
 // int main()
 // {
-// 	t_list	*node;
-// 	node = ft_lstnew("string");
-// 	printf("%p\n", node->content);
-// 	printf("%p\n", node->next);
+// 	t_list	*p;
+// 	t_list	new;
+// 	p = NULL;
+// 	new.content = "hello";
+// 	new.next = NULL;
+// 	p = ft_lstnew("ok");
+// 	ft_lstadd_back(&p, &new); 
+// 	while (p != NULL)
+// 	{
+//    		printf("%s \n", p->content);
+// 		printf("%p\n", p->next);
+//     	p = p->next;
+// 	}
 // }

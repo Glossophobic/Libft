@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 23:31:08 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/24 02:58:29 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/25 03:43:14 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_isdigit(int c);
 int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
 int		ft_atoi(const char *str);
 t_list	*ft_lstnew(void *content);
 size_t	ft_strlen(const char *str);
@@ -49,6 +50,7 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 void	*ft_calloc(size_t count, size_t size);
 void	*ft_memset(void *str, int c, size_t n);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 char	*ft_strjoin(char const *s1, char const *s2);
 void	*ft_memchr(const void *str, int c, size_t n);

@@ -6,7 +6,7 @@
 #    By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 22:21:38 by oubelhaj          #+#    #+#              #
-#    Updated: 2022/10/24 03:06:05 by oubelhaj         ###   ########.fr        #
+#    Updated: 2022/10/25 03:44:53 by oubelhaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS =  ft_isalnum.c ft_isprint.c ft_memmove.c ft_putnbr_fd.c ft_strlcat.c \
 		ft_memcpy.c ft_putendl_fd.c ft_strdup.c ft_strncmp.c ft_tolower.c ft_strjoin.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_striteri.c ft_strmapi.c
 
-BSRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
+BSRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
 
 OBJS = ${SRCS:.c=.o}
 
