@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:51:27 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/22 03:12:10 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:20:09 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	countwrd(char const *str, char sep)
 	return (count);
 }
 
-static char	*ft_strndup(const char *s, int n)
+static char	*alloc_and_fill(const char *s, int n)
 {
 	char	*str;
 	int		i;
@@ -71,7 +71,7 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > j)
-			tab[k++] = ft_strndup(s + j, i - j);
+			tab[k++] = alloc_and_fill(s + j, i - j);
 	}
 	tab[k] = 0;
 	return (tab);
