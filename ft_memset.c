@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 05:28:45 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/22 03:54:07 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/28 00:16:15 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,28 +17,23 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	*p;
 
 	p = b;
-	while (len > 0)
-	{
-		*p = (unsigned char)c;
-		p++;
-		len--;
-	}
+	while (len-- > 0)
+		*p++ = (unsigned char)c;
 	return (b);
 }
 
-/*#include <stdio.h>
-#include <string.h>
-int main()
-{
-	int n = 9;
-	 int zab[] = {9,8,7,6,5,4,3,2,1};
-	memset(&zab, 6,  1);
-    int i =0;
-    while (i < n)
-    {
-        printf("%d ", zab[i]);
-        i++;
-    }
-	return 0;
-}
-*/
+
+// int main()
+// {
+// 	int *p;
+// 	int zab[50] = {6,255,9,85};
+//     p = zab;
+// 	int i = 0;
+//     while (i < 4)
+//     {
+// 		ft_memset(p, 69, 1);
+//         printf("%d ", *p++);
+// 		i++;
+//     }
+// 	return 0;
+// }

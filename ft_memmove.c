@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:45:14 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/22 04:05:39 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/27 21:49:23 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-// #include <stdio.h>
+
 // int main()
 // {
-// 	char str[] = "abcde";
-// 	memmove(str + 2, str, 3);
-// 	printf("%s", str);
+// 	int str[100] = {1, 5, 6, 9, 6};
+// 	ft_memmove(str + 2, str, 12);
+// 	for (int i = 0; i < 5; i++)
+// 		printf("%d, ", str[i]);
 // }

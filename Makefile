@@ -6,7 +6,7 @@
 #    By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 22:21:38 by oubelhaj          #+#    #+#              #
-#    Updated: 2022/10/26 23:38:43 by oubelhaj         ###   ########.fr        #
+#    Updated: 2022/10/27 14:30:46 by oubelhaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS =  ft_isalnum.c ft_isprint.c ft_memmove.c ft_putnbr_fd.c ft_strlcat.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_striteri.c ft_strmapi.c
 
 BSRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+		ft_lstdelone.c ft_lstclear.c ft_lstiter.c 
 
 OBJS = ${SRCS:.c=.o}
 

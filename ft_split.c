@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:51:27 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/26 18:51:42 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/27 17:56:49 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	countwrd(char const *str, char sep)
 {
-	unsigned int	i;
-	int				count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;

@@ -6,29 +6,27 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:21:53 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/24 02:53:45 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/27 23:43:57 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_nb(int nb)
+static int	count_nb(long int nb)
 {
 	int		count;
-	long	n;
 
-	n = (long)nb;
 	count = 0;
-	if (n == 0)
+	if (nb == 0)
 		count++;
-	if (n < 0)
+	if (nb < 0)
 	{
-		n *= -1;
+		nb *= -1;
 		count++;
 	}
-	while (n > 0)
+	while (nb > 0)
 	{
-		n /= 10;
+		nb /= 10;
 		count++;
 	}
 	return (count);
@@ -41,7 +39,7 @@ char	*ft_itoa(int n)
 	char	*str;
 	long	nbr;
 
-	nbr = (long)n;
+	nbr = n;
 	len = count_nb(n);
 	str = malloc(sizeof(char) * len + 1);
 	if (!str)
@@ -54,10 +52,15 @@ char	*ft_itoa(int n)
 		nbr *= -1;
 		i = 1;
 	}
-	while (--len >= i)
+	while (--len >= i) // decrement then compare
 	{
 		str[len] = (nbr % 10) + 48;
 		nbr /= 10;
 	}
 	return (str);
 }
+
+// int main()
+// {
+// 	printf("%s", ft_itoa(-0));
+// }
