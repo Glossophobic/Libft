@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 03:55:13 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/22 04:01:48 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/28 23:11:57 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		rem = ft_strlen(s) - start;
 	else
 		rem = len;
-	substr = malloc(rem + 1);
+	substr = malloc(sizeof(char) * rem + 1);
 	if (!substr)
 		return (0);
 	while (i < rem)

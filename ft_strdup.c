@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 06:21:25 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/22 03:55:04 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/28 22:05:59 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	char	*dup;
 
 	i = 0;
-	dup = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	dup = malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (!dup)
 		return (NULL);
 	while (s1[i])
@@ -29,10 +29,3 @@ char	*ft_strdup(const char *s1)
 	dup[i] = '\0';
 	return (dup);
 }
-
-/*#include <stdio.h>
-int main()
-{
-	char str[] = "bnt louarrak";
-	printf("%s", ft_strdup(str));
-}*/

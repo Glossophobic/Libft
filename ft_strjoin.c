@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 01:47:49 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/22 03:56:53 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/28 21:10:26 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memmove(str + s1_len, s2, s2_len + 1);
 	return (str);
 }
+
+// int main()
+// {
+// 	char	str1[] = "senpai";
+// 	char	str2[] = "joinme";
+// 	printf("%s", ft_strjoin(NULL, NULL));
+// }

@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:49:49 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/27 21:39:32 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/28 11:49:34 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // #include <stdio.h>
 // int main()
 // {
-// 	int src[] = {240,8,7,6};
+// 	int src[] = {4336,8,7,69};
 // 	int dest[100] = {};
-// 	memcpy(dest, src, 1);
+// 	memcpy(dest, src, 16);
 // 	int n  = 0;
-// 	while (n < 1)
+// 	while (n < 4)
 // 	{
 // 		printf("%d ",dest[n++]);
 // 	}

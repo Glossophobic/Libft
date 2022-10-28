@@ -6,12 +6,11 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:51:27 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/27 17:56:49 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/28 23:01:43 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 static int	countwrd(char const *str, char sep)
 {
 	int	i;
@@ -51,20 +50,25 @@ static char	*alloc_and_fill(const char *s, int n)
 	return (str);
 }
 
-char	**ft_split(char const *s, char c)
+static void	*free_(char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		free(str[i++]);
+	free(str);
+	return (NULL);
+}
+
+static char	**calcul_to_alloc(const char *s, char c, char **new_string)
 {
 	int		i;
 	int		j;
 	int		k;
-	char	**tab;
 
 	i = 0;
 	k = 0;
-	if (!s)
-		return (0);
-	tab = malloc(sizeof(char *) * (countwrd(s, c) + 1));
-	if (!tab)
-		return (0);
 	while (s[i])
 	{
 		while (s[i] == c)
@@ -73,16 +77,34 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > j)
-			tab[k++] = alloc_and_fill(s + j, i - j);
+		{
+			new_string[k] = alloc_and_fill(s + j, i - j);
+			if (!new_string[k])
+				return (free_(new_string));
+			k++;
+		}
 	}
-	tab[k] = 0;
-	return (tab);
+	new_string[k] = 0;
+	return (new_string);
 }
+
+char	**ft_split(char const *s, char c)
+{
+	char	**new_string;
+
+	if (!s)
+		return (0);
+	new_string = malloc(sizeof(char *) * (countwrd(s, c) + 1));
+	if (!new_string)
+		return (0);
+	return (calcul_to_alloc(s,c, new_string));
+}
+
 
 // int main()
 // {
 //   char **str;
-//   str = ft_split("\0aa\0bbb", '\0');
+//   str = ft_split("  split me  senpai  ", ' ');
 //   int i = 0;
 
 //   while (str[i])

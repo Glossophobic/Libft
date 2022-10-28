@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 23:35:55 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/22 03:54:43 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/28 23:02:51 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *str, int c)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == (char)c)
+		if (str[i] == (char)c) 			  // explain this typecast with the example below
 			return ((char *)&str[i]);
 		i++;
 	}
@@ -28,13 +28,9 @@ char	*ft_strchr(const char *str, int c)
 	return (0);
 }
 
-/*#include <string.h>
-#include <stdio.h>
-int	main()
-{
-	const char str[] = "moradfgf";
-	int c = 6;
-
-	printf("dyalna  : %s\n",ft_strchr(str, c));
-	printf("dyalhom : %s", strchr(str, c));
-}*/
+// int main()
+// {
+	
+// 	printf("%p\n", ft_strchr("test~ef", 101 + 256));
+// 	printf("%p\n", strchr("test~ef",  'e' + 256));
+// }
