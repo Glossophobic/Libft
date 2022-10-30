@@ -6,12 +6,13 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:51:27 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/28 23:01:43 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/29 01:05:00 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static int	countwrd(char const *str, char sep)
+
+static int	count_words(char const *str, char sep)
 {
 	int	i;
 	int	count;
@@ -94,7 +95,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	new_string = malloc(sizeof(char *) * (countwrd(s, c) + 1));
+	new_string = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!new_string)
 		return (0);
 	return (calcul_to_alloc(s,c, new_string));

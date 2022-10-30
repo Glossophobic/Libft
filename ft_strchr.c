@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 23:35:55 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/28 23:02:51 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/30 16:10:06 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,12 @@ char	*ft_strchr(const char *str, int c)
 	return (0);
 }
 
-// int main()
-// {
+int main()
+{
 	
-// 	printf("%p\n", ft_strchr("test~ef", 101 + 256));
+	printf("%s\n", ft_strchr("test~ef", 357));
 // 	printf("%p\n", strchr("test~ef",  'e' + 256));
-// }
+}
+
+// when typecasted to char e + 256 will overflow when it reaches 128 and loop back to the 'e'
+// while if not typecasted it will be considered an integer and search for 357

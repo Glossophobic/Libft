@@ -6,9 +6,11 @@
 #    By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 22:21:38 by oubelhaj          #+#    #+#              #
-#    Updated: 2022/10/27 14:30:46 by oubelhaj         ###   ########.fr        #
+#    Updated: 2022/10/30 17:18:38 by oubelhaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME = libft.a
 
 SRCS =  ft_isalnum.c ft_isprint.c ft_memmove.c ft_putnbr_fd.c ft_strlcat.c \
 		ft_strnstr.c ft_toupper.c ft_atoi.c ft_isalpha.c ft_memchr.c ft_memset.c \
@@ -24,22 +26,15 @@ OBJS = ${SRCS:.c=.o}
 
 BOBJS = ${BSRCS:.c=.o}
 
-CC = cc
-
 CFLAGS = -Wall -Wextra -Werror
-
-NAME = libft.a
-
-%.o:%.c
-	${CC} ${CFLAGS} -c $< -o $@
 
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	ar rcs ${NAME} ${OBJS}
+	ar r ${NAME} ${OBJS}
 
 bonus: ${BOBJS} ${NAME}
-	ar rcs ${NAME} ${BOBJS}
+	ar r ${NAME} ${BOBJS}
 
 clean:
 	rm -rf ${OBJS} ${BOBJS}

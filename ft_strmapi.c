@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 21:15:35 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/22 04:06:33 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/30 17:32:30 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*new_string;
 
 	i = 0;
+	if (!f || !s)
+		return (0);
 	new_string = malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!new_string)
 		return (0);
