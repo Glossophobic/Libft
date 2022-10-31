@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 21:23:01 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/30 17:33:26 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/31 18:40:21 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 // int main()
 // {
 // 	char str[] = "hhhhhhhhh";
-// 	ft_striteri(str, &fnc);
-// 	printf("%s\n", str);
+// 	ft_striteri(str, NULL);
+// 	// printf("%s\n", str);
 // }

@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 03:02:33 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/28 22:22:54 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/10/31 18:36:01 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,24 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	s_len;
 
 	i = 0;
-	s_len = ft_strlen(src);
-	if (dstsize == 0)
-		return (s_len);
-	while (src[i] && i < dstsize - 1)
+	if (dstsize > 0)
 	{
-		dst[i] = src[i];
-		i++;
+		while (src[i] && i < dstsize - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
-	return (s_len);
+	return (ft_strlen(src));
 }
+// THIS SHIT DOESNT ABORT LIKE THE ORIGINAL ONE 
+
+// int main()
+// {
+// 	char str[20] = "stringgljhdfkgdh";
+// 	char dest[20]= "";
+// 	printf("%zu\n%s",ft_strlcpy(dest, str, 12), dest);
+// }
