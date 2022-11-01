@@ -6,17 +6,11 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 21:23:01 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/31 18:40:21 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:01:10 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// void	fnc(unsigned int i, char *str)
-// {
-// 	i = 0;
-// 	str[i] -= 32;
-// }
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -31,10 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-// int main()
-// {
-// 	char str[] = "hhhhhhhhh";
-// 	ft_striteri(str, NULL);
-// 	// printf("%s\n", str);
-// }

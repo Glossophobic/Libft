@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:21:53 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/27 23:43:57 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:00:08 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,10 @@ char	*ft_itoa(int n)
 		nbr *= -1;
 		i = 1;
 	}
-	while (--len >= i) // decrement then compare
+	while (--len >= i)
 	{
 		str[len] = (nbr % 10) + 48;
 		nbr /= 10;
 	}
 	return (str);
 }
-
-// int main()
-// {
-// 	printf("%s", ft_itoa(-0));
-// }

@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 23:44:03 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/22 03:59:17 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:02:27 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,3 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (0);
 }
-
-/*#include <string.h>
-#include <stdio.h>
-int	main()
-{
-	const char str[] = "moryadgay";
-	char c = 'z';
-
-	printf("dyalna  : %s\n",ft_strrchr(str, c));
-	printf("dyalhom : %s", strrchr(str, c));
-}
-*/

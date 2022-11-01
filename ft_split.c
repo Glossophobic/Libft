@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:51:27 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/29 01:05:00 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:56:40 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,19 +98,5 @@ char	**ft_split(char const *s, char c)
 	new_string = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!new_string)
 		return (0);
-	return (calcul_to_alloc(s,c, new_string));
+	return (calcul_to_alloc(s, c, new_string));
 }
-
-
-// int main()
-// {
-//   char **str;
-//   str = ft_split("  split me  senpai  ", ' ');
-//   int i = 0;
-
-//   while (str[i])
-//   {
-//     printf("%s\n", str[i]);
-//     i++;
-//   }
-// }

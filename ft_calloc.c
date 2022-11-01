@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 01:13:53 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/11/01 02:24:42 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 20:59:45 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
 
-	if (size && count > SIZE_MAX / size) // darb = overflow || qisma mat overflowach (dont do this : count > SIZE_MAX / size)
+	if (size && count > SIZE_MAX / size)
 		return (NULL);
 	p = malloc(size * count);
 	if (!p)
@@ -24,15 +24,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(p, size * count);
 	return (p);
 }
-
-// int main()
-// {
-// 	char	*d;
-// 	char	*d2;
-	
-// 	d = ft_calloc(SIZE_MAX, SIZE_MAX);
-// 	printf("MINE  : %p\n", d);
-// 	d2 = calloc(SIZE_MAX, SIZE_MAX);
-// 	printf("THEIRS: %p\n", d2);
-
-// }

@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 21:15:35 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/30 17:32:30 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:01:52 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_string[i] = '\0';
 	return (new_string);
 }
-
-// int main()
-// {
-// 	char str[] = "0000000000";
-// 	printf("%s\n", ft_strmapi(str, &iter));
-// }
-
-//char (*)(unsigned int, char *)
-//char (*)(unsigned int, char)

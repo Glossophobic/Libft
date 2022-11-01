@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:45:14 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/31 20:24:37 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:03:56 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,22 +36,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-// int main()
-// {
-// 	printf("%s", ft_memmove(NULL, NULL, 5));
-	// int n  = 0;
-	// while (n < 4)
-	// {
-	// 	printf("%d ",dest[n++]);
-	// }
-// }
-
-
-// int main()
-// {
-// 	int str[100] = {1, 5, 6, 9, 6};
-// 	ft_memmove(str + 2, str, 12);
-// 	for (int i = 0; i < 5; i++)
-// 		printf("%d, ", str[i]);
-// }

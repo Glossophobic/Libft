@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 02:33:05 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/31 18:49:19 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 22:38:00 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-// LEN IS HOW MANY CHARACTERS TO SEARCH FOR
-
-// #include <string.h>
-// int main()
-// {
-// 	char haystack[] = "";
-// 	char needle[6] = "";
-// 	printf("%zu\n", needle_len);
-// 	printf("Mine   : %s\n", ft_strnstr(haystack, needle, 11));
-// 	printf("Theirs : %s", strnstr(haystack, needle, 11));
-// }

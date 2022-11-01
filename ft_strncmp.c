@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 00:12:02 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/30 20:59:27 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:01:57 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-
-// int main()
-// {
-// 	char str[] =  "hhha";
-// 	char str2[] = "hhhh";
-// }

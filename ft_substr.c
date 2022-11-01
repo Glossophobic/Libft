@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 03:55:13 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/11/01 03:11:13 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:02:43 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-
-// int main()
-// {
-// 	char str[] = "hello";
-// 	printf("%s\n", ft_substr(str, 5, 10651654));
-// }
