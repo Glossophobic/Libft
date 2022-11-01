@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 01:13:53 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/31 19:13:28 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 02:24:42 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ void	*ft_calloc(size_t count, size_t size)
 	return (p);
 }
 
-int main()
-{
-	char	*d;
-	char	*d2;
+// int main()
+// {
+// 	char	*d;
+// 	char	*d2;
 	
-	d = ft_calloc(SIZE_MAX, SIZE_MAX);
-	printf("MINE  : %p\n", d);
-	d2 = calloc(SIZE_MAX, SIZE_MAX);
-	printf("THEIRS: %p\n", d2);
+// 	d = ft_calloc(SIZE_MAX, SIZE_MAX);
+// 	printf("MINE  : %p\n", d);
+// 	d2 = calloc(SIZE_MAX, SIZE_MAX);
+// 	printf("THEIRS: %p\n", d2);
 
-}
+// }

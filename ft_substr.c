@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 03:55:13 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/31 19:06:00 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 03:11:13 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substr;
 
 	i = 0;
-	s_len = ft_strlen(s);
 	if (!s)
 		return (0);
+	s_len = ft_strlen(s);
 	if (start >= s_len)
 		rem = 0;
 	else if (s_len - start < len)

@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 06:06:36 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/22 03:44:10 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 03:14:20 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,16 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
+
+
+
+
+
+
+
+
+
+
 /*while (str[i] >= '0' && str[i] <= '9')
 	{
 		nb = nb * 10 + (str[i] - '0');

@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 00:55:44 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/31 22:53:00 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 00:17:26 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,19 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*tmp;
-	
-	tmp = *lst;
-	if (tmp != NULL)
-		ft_lstlast(tmp)->next = new;
+	if (*lst != NULL)
+		ft_lstlast(*lst)->next = new;
 	else
-		tmp = new;
-	new->next = NULL;
+		*lst = new;
 }
 
-int main()
-{
-	t_list	*list;
+// int main()
+// {
+// 	t_list	*list;
 	
-	list = ft_lstnew("element 0");
-	ft_lstadd_back(&list, ft_lstnew("element 1"));
-	printf("%s\n", list->content);
-	printf("%s\n", list->next->content);
-	return (0);
-}
+// 	list = ft_lstnew("node 0");
+// 	ft_lstadd_back(&list, ft_lstnew("node 1"));
+// 	printf("%s\n", list->content);
+// 	printf("%s\n", list->next->content);
+// 	return (0);
+// }
