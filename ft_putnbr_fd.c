@@ -6,7 +6,7 @@
 /*   By: oubelhaj <oubelhaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 21:24:10 by oubelhaj          #+#    #+#             */
-/*   Updated: 2022/10/31 20:59:26 by oubelhaj         ###   ########.fr       */
+/*   Updated: 2022/11/01 23:32:31 by oubelhaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,8 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n / 10, fd);
 		ft_putnbr_fd(n % 10, fd);
 	}
+}
+int main()
+{
+	ft_putnbr(42, 1);
 }
